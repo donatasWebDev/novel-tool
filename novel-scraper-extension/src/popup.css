@@ -1,0 +1,120 @@
+:root {
+  color: #1c2430;
+  background: #f4efe6;
+  font: 14px/1.4 Georgia, "Palatino Linotype", serif;
+}
+
+body {
+  width: 340px;
+  margin: 0;
+  padding: 14px;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+header p,
+.meta,
+#snippet,
+#status {
+  color: #5c5348;
+}
+
+header p {
+  margin-top: 4px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 7px 8px;
+  border: 1px solid #c9bba6;
+  border-radius: 4px;
+  background: #fffdf8;
+  color: #1c2430;
+  font: 14px/1.3 Georgia, serif;
+}
+
+section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #e0d5c5;
+}
+
+h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#page-title {
+  margin-top: 4px;
+}
+
+#snippet {
+  margin-top: 4px;
+  max-height: 72px;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.collect label {
+  flex: 1;
+  margin-top: 0;
+}
+
+.collect input {
+  width: 80px;
+}
+
+button {
+  flex: 1;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 10px;
+  background: #8a5a2b;
+  color: #fffdf8;
+  font: 14px/1.2 Georgia, serif;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  color: #1c2430;
+  border: 1px solid #c9bba6;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+#status {
+  min-height: 1.2em;
+  margin-top: 10px;
+}
+
+#page-meta.waiting,
+#status.error {
+  color: #8d2b2b;
+}

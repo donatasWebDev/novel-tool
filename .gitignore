@@ -1,0 +1,20 @@
+# Other local projects in this folder
+/Lock in/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+config.yaml
+
+# Generated audio and scraped exports
+*.wav
+*.mp3
+*.m4a
+sraped_text/
+scraped_text/
+
+# OS
+Thumbs.db
+Desktop.ini
+desktop.ini

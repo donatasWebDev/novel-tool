@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Novel Scraper",
+  "version": "1.3.0",
+  "description": "Save the English chapter you are reading and export Novel-TTS JSON.",
+  "permissions": ["storage", "unlimitedStorage", "activeTab", "scripting", "downloads", "tabs"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_title": "Novel Scraper",
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

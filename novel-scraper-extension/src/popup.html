@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Novel Scraper</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Novel Scraper</h1>
+      <p>Save the chapter on this page, then export Novel-TTS JSON.</p>
+    </header>
+
+    <label>
+      Novel name
+      <input id="novel" type="text" autocomplete="off" placeholder="Name used in the export" />
+    </label>
+
+    <p id="saved" class="meta">No chapters saved yet.</p>
+
+    <section id="page">
+      <h2>This page</h2>
+      <p id="page-meta" class="meta">Reading the page…</p>
+      <p id="page-title"></p>
+      <p id="snippet"></p>
+    </section>
+
+    <label>
+      Chapter number
+      <input id="chapter-no" type="number" min="0" step="1" />
+    </label>
+
+    <div class="row">
+      <button id="save" type="button">Save chapter</button>
+    </div>
+
+    <label>
+      Delay (seconds)
+      <input id="delay" type="number" min="0" max="120" step="0.5" value="2" />
+    </label>
+    <p class="meta">Waits this long before each scan, then again before Next.</p>
+
+    <div class="row collect">
+      <label>
+        Chapters
+        <input id="count" type="number" min="1" step="1" value="10" />
+      </label>
+      <button id="start" type="button">Start</button>
+      <button id="stop" type="button" class="ghost">Stop</button>
+    </div>
+
+    <div class="row">
+      <button id="export" type="button">Export JSON</button>
+      <button id="clear" type="button" class="ghost">Clear novel</button>
+    </div>
+
+    <p id="status" role="status"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>
